@@ -7,14 +7,6 @@ def encode():
         encoded += str((int(raw_password[i]) + 3) % 10)
     return encoded
 
-def decode(encoded_password):
-    # Loop through each digit and subtract 3 to it
-    decoded = ""
-    for i in range(len(encoded_password)):
-        # Modulo 10 gets the last digit.
-        decoded += str(abs((int(encoded_password[i]) - 3) % 10))
-    return decoded
-
 def main():
     stored_encoded = ""
     while True:
